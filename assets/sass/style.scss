@@ -1,0 +1,25 @@
+/** 
+Template Name: IPTV HTML Template 
+Version: 1.0.0.
+Author: Nayem
+Author URI: 
+Tags: IPTV 
+Description: This is a HTML Template based on IPTV Service
+**/
+
+
+//theme files
+@import 'theme/variables'; 
+@import 'theme/typography'; 
+@import 'theme/spacing'; 
+@import 'theme/mixin';
+
+//components
+@import 'components/header'; 
+@import 'components/footer'; 
+@import 'components/button'; 
+
+
+//pages
+@import 'pages/index-1'; 
+@import 'pages/blog';
