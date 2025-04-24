@@ -1,0 +1,60 @@
+/*** header section ***/
+.ip_header_section {
+    padding: 85px 0;
+    position: relative; 
+    z-index: 2;
+}
+
+.ip_header_right {
+    gap: 90px;
+
+    @include screen-575 {
+        gap: 24px;
+    }
+}
+
+.ip_language_switcher {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a {
+        color: rgba($color-white, 0.8);
+        font-size: 14px;
+
+        &.active {
+            width: 44px; 
+            height: 44px; 
+            display: inline-flex;
+            border-radius: 50%; 
+            justify-content: center;
+            align-items: center;
+            background: $dark-bg;
+            color: $color-white;
+            font-weight: 700;
+        }
+    }
+}
+
+.ip_header_links {
+    position: relative;
+    &::before {
+        content: ''; 
+        position: absolute;
+        width: 1px; 
+        height: 32px;
+        background: rgba($color-white, 0.2);
+        left: -45px;
+    }
+
+
+    a {
+        color: $color-white;
+        font-weight: 600;
+    }
+
+    @include screen-575 {
+        &::before {
+            left: -12px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+/***** hero section *****/  
+.ip_hero_section {
+    padding: 320px 0 150px;
+    margin-top: -260px;
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: 0;
+        top: 0; 
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(231.41deg, rgba(0, 0, 0, 0) 8.26%, #0E151B 68.29%);
+        z-index: -1;
+    }
+}
+
+.ip_hero_left {
+    h1 {
+        color: $color-white;
+        margin-bottom: 24px;
+        span {
+            font-weight: 300;
+        }
+    }
+    p {
+        font-weight: 500;
+        color: $color-white;
+        margin-bottom: 32px;
+    }
+}
+
+.ip_hero_slider {
+    .swiper-slide {
+        img {
+            border-radius: 32px;
+        }
+    }
+}

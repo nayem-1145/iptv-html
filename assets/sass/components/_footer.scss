@@ -1,0 +1,70 @@
+//footer section
+.ip_footer_section {
+    padding: 80px 0;
+    background: $footer-bg;
+    position: relative;
+
+    .ip_footer_shape {
+        position: absolute;
+        left: 0; 
+        width: 100%;
+        z-index: 1;
+
+        &.top_shape {
+            top: 0;
+        }
+
+        &.bottom_shape {
+            bottom: 0;
+        }
+    }
+}
+
+.ip_footer_widget {
+    p {
+       color: rgba($color-white, 0.8);
+       font-size: 14px;
+    }
+
+    h4 {
+        color: $color-white; 
+        font-size: 14px; 
+        font-weight: 500;
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+
+        &::before {
+            content: ''; 
+            position: absolute;
+            left: 0; 
+            bottom: -8px;
+            width: 25px; 
+            height: 3px; 
+            border-radius: 10px;
+            background: $primary-color;
+        }
+    }
+
+    ul {
+        li {
+            display: block;
+
+            + li {
+                margin-top: 16px;
+            }
+
+            a {
+                color: rgba($color-white, 0.8);
+                transition: 0.3s;
+                font-size: 14px;
+
+                &:hover {
+                    color: $color-white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+}

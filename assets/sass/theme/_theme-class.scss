@@ -1,0 +1,18 @@
+.container {
+    max-width: 1260px;
+    padding: 0 10px;
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+
+.pl-30 {
+    padding-left: 30px;
+}
+
+.pl-992-0 {
+    @include screen-992 {
+        padding-left: 0;
+    }
+}
