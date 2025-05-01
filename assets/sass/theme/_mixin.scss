@@ -1,5 +1,11 @@
 //mixin 
 
+@mixin screen-1200 {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
 @mixin screen-992 {
     @media (max-width: 991px) {
         @content;

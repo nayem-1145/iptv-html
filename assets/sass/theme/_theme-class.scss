@@ -3,6 +3,12 @@
     padding: 0 10px;
 }
 
+.container-1100 {
+    max-width: 1100px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
 .pl-40 {
     padding-left: 40px;
 }
@@ -14,5 +20,19 @@
 .pl-992-0 {
     @include screen-992 {
         padding-left: 0;
+    }
+}
+
+.mx-200 {
+    max-width: 200px;
+}
+
+
+.ip_section_title {
+    h2 {
+        span {
+            display: block;
+            font-weight: 300;
+        }
     }
 }
