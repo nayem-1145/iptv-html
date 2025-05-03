@@ -177,3 +177,62 @@
         clip-path: polygon(85% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
     }
 }
+
+
+/***** series section ****/
+.ip_series_slider_wrapper {
+    .ip_monitor_shape {
+        position: absolute; 
+        right: -10px; 
+        top: -130px; 
+        z-index: 2;
+
+        @include screen-2200 {
+            top: -108px;
+        }
+
+        @include screen-1800 {
+            top: -40px; 
+            width: 500px;
+        }
+
+        @include screen-768 {
+            display: none;
+        }
+    }
+}
+.ip_series_slider {
+    transform: rotate(-3deg);
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    .swiper-slide {
+        width: auto;
+    }
+    .ip_series_thumb {
+        display: inline-block; 
+        width: 180px;
+        border-radius: 24px;
+        overflow: hidden;
+        opacity: 0.6;
+    }
+}
+
+/**** brand section ****/ 
+.ip_brand_section {
+    background: #122429;
+    transform: rotate(-3deg);
+    padding: 80px 0;
+    z-index: 10;
+    margin-top: 60px;
+
+}
+
+.ip_brand_slider {
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    .swiper-slide {
+        width: auto;
+    }
+}

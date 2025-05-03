@@ -8,6 +8,10 @@
     border-radius: 24px;
     display: inline-block;
     transition: 0.3s;
+
+    &.small_btn {
+        padding: 12px 24px;
+    }
 }
 
 .ip_primary_btn {
@@ -31,3 +35,4 @@
         border-color: $dark-bg;
     }
 }
+
