@@ -1,0 +1,32 @@
+/***** blog page *****/
+
+.ip_featured_slider_section {
+    padding: 100px 0;
+}
+
+.ip_featured_slider {
+    .ip_featured_slider_pagination {
+        position: absolute;
+        top: 0; 
+        right: 20px; 
+        bottom: auto; 
+        left: auto;
+        z-index: 100;
+        text-align: right;
+    }
+}
+
+.ip_ft_post_card {
+    min-height: 410px;
+    .ip_blog_card_content {
+        width: 100%;
+        h4 {
+            max-width: 300px;
+        }
+    }
+
+    .ip_primary_btn {
+        min-width: 270px;
+        text-align: center;
+    }
+}

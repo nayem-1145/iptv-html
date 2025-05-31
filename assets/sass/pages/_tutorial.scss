@@ -1,0 +1,61 @@
+.ip_breadcrumb {
+    padding: 32px 0;
+    border-top: 1px solid  rgba($color-white, 0.1);
+    border-bottom: 1px solid  rgba($color-white, 0.1);
+    
+    p {
+        color: rgba($color-white, 0.4);  
+        a {
+            display: inline-block; 
+            margin-right: 4px;
+            color: rgba($color-white, 0.4);  
+        }
+        span {
+            margin-left: 4px;
+        }
+    }
+}
+
+.ip_tutorial_section {
+    padding: 100px 0;
+}
+
+.ip_tutorials_count {
+    span {
+        opacity:  0.6;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+.ip_sort_wrapper {
+    display: inline-block;
+    max-width: 160px;
+    position: relative;
+    
+    &::after {
+        content: '^';
+        position: absolute;
+        top: 12px; 
+        right: 16px; 
+        color: $color-white;
+        transform: rotate(180deg);
+
+    }
+
+    .ip_tutorial_sort {
+        background: transparent;
+        border: 1px solid rgba($color-white, 0.1); 
+        font-size: 16px;
+        color: $color-white;
+        padding: 16px 36px 16px 28px; 
+        box-shadow: none;
+
+        option {
+            color: #000000;
+        }
+    }
+}
+
+
+

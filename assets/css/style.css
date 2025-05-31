@@ -84,6 +84,18 @@ h2 {
 .mt-32 {
   margin-top: 32px; }
 
+.pt-100 {
+  padding-top: 100px; }
+  @media (max-width: 575px) {
+    .pt-100 {
+      padding-top: 80px; } }
+
+.pb-100 {
+  padding-bottom: 100px; }
+  @media (max-width: 575px) {
+    .pb-100 {
+      padding-bottom: 80px; } }
+
 .container {
   max-width: 1260px;
   padding: 0 10px; }
@@ -112,6 +124,12 @@ h2 {
 
 .mx-650 {
   max-width: 650px; }
+
+.top-10 {
+  top: 10px; }
+
+.bottom-10 {
+  bottom: 10px; }
 
 /*** header section ***/
 .ip_header_section {
@@ -179,9 +197,9 @@ h2 {
     width: 100%;
     z-index: 1; }
     .ip_footer_section .ip_footer_shape.top_shape {
-      top: 0; }
+      top: 10px; }
     .ip_footer_section .ip_footer_shape.bottom_shape {
-      bottom: 0; }
+      bottom: 10px; }
 
 .ip_footer_widget p {
   color: rgba(255, 255, 255, 0.8);
@@ -246,6 +264,34 @@ h2 {
   .ip_outline_btn:hover {
     background: #253745;
     border-color: #253745; }
+
+.ip_pagination ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .ip_pagination ul li a:hover {
+    background: rgba(255, 255, 255, 0.1); }
+  .ip_pagination ul li a.active {
+    background: #FF3B6A;
+    color: #ffffff; }
+
+@media (max-width: 991px) {
+  .ip_pagination ul li a {
+    font-size: 12px;
+    width: 40px;
+    height: 40px; } }
 
 /***** hero section *****/
 .ip_hero_section {
@@ -455,3 +501,291 @@ h2 {
 
 .ip_brand_slider .swiper-slide {
   width: auto; }
+
+/****** pricing section start *****/
+.ip_pricing_section {
+  position: relative;
+  z-index: 1;
+  padding-top: 300px; }
+  .ip_pricing_section .ip_camera_shape {
+    position: absolute;
+    right: 0;
+    top: -330px; }
+  @media (max-width: 991px) {
+    .ip_pricing_section .ip_camera_shape {
+      display: none; } }
+
+.ip_pricing_slider {
+  width: calc(100% + 800px);
+  margin-left: -400px;
+  padding-top: 60px; }
+  .ip_pricing_slider .swiper-slide {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+  .ip_pricing_slider .swiper-slide-active {
+    -webkit-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    transform: translateY(-60px); }
+
+.ip_slider_pagination {
+  text-align: center;
+  margin-top: 32px; }
+  .ip_slider_pagination .swiper-pagination-bullet {
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    opacity: 1;
+    border-radius: 0; }
+    .ip_slider_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background: #FF3B6A; }
+
+.pricing_card_wrapper {
+  position: relative;
+  padding-top: 10px; }
+  .pricing_card_wrapper .popular_bade {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #FF3B6A;
+    padding: 6px 12px;
+    color: #ffffff;
+    font-size: 14px;
+    z-index: 2; }
+    .pricing_card_wrapper .popular_bade::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 10px;
+      height: 10px;
+      background: #AD2042;
+      -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      clip-path: polygon(0 0, 0% 100%, 100% 100%); }
+
+.ip_pricing_card {
+  -webkit-clip-path: polygon(85% 0, 100% 7%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(85% 0, 100% 7%, 100% 100%, 0 100%, 0 0);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative; }
+  .ip_pricing_card .ip_pricing_card_content {
+    background: #1B3036;
+    padding: 46px 30px 30px; }
+    .ip_pricing_card .ip_pricing_card_content .ip_pricing_card_header h2 {
+      font-size: 40px;
+      line-height: 20px; }
+      .ip_pricing_card .ip_pricing_card_content .ip_pricing_card_header h2 span {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.4); }
+  .ip_pricing_card .ip_pricing_feature_list {
+    margin-top: 60px; }
+    .ip_pricing_card .ip_pricing_feature_list li {
+      display: block;
+      padding: 20px 0;
+      color: #CCD0CF;
+      border-bottom: 1px dashed #ccd0cf61; }
+      .ip_pricing_card .ip_pricing_feature_list li i {
+        margin-right: 10px; }
+  .ip_pricing_card .ip_pricing_brand_wrapper {
+    gap: 64px;
+    background: #13242A;
+    padding: 40px; }
+
+.ip_star_review {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px; }
+  .ip_star_review li {
+    color: #FFE74A;
+    font-size: 14px; }
+    .ip_star_review li i.fa-regular {
+      color: rgba(255, 255, 255, 0.2); }
+
+/****** testimonial section start *********/
+.ip_testimonial_section {
+  padding-top: 100px; }
+
+.ip_testimonial_slider {
+  max-width: 850px; }
+  .ip_testimonial_slider .swiper-slide {
+    overflow: visible; }
+  .ip_testimonial_slider .swiper-slide-shadow {
+    display: none; }
+
+.ip_testimonial_card {
+  border-radius: 33px;
+  background: #1E3B44;
+  padding: 60px 90px 34px;
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.259);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.259); }
+  .ip_testimonial_card .ip_tst_bottom {
+    margin-top: 32px;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden; }
+    .ip_testimonial_card .ip_tst_bottom::before {
+      content: '----------------------------------------';
+      letter-spacing: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+      font-size: 14px; }
+  .ip_testimonial_card .ip_author_thumbnail {
+    border-radius: 40px;
+    overflow: hidden; }
+  .ip_testimonial_card .ip_tst_author_content h5 span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6); }
+  .ip_testimonial_card .likes-count svg {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px); }
+  @media (max-width: 991px) {
+    .ip_testimonial_card {
+      padding: 60px 32px 34px; } }
+
+/***** faq section start *****/
+.ip_faq_section {
+  padding: 100px 0; }
+
+.ip_accordion .accordion-item {
+  background: #122429;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 32px;
+  border-radius: 12px; }
+  .ip_accordion .accordion-item .accordion-header a {
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    position: relative; }
+    .ip_accordion .accordion-item .accordion-header a::after {
+      content: '\f106';
+      font-family: 'FontAwesome';
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+    .ip_accordion .accordion-item .accordion-header a.collapsed::after {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .ip_accordion .accordion-item p {
+    color: rgba(255, 255, 255, 0.6); }
+  .ip_accordion .accordion-item .accordion-body {
+    padding: 0;
+    padding-top: 16px; }
+  .ip_accordion .accordion-item + .accordion-item {
+    margin-top: 12px; }
+
+/***** blog section ****/
+.ip_blog_section {
+  padding: 100px 0; }
+
+.ip_blog_card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 240px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden; }
+  .ip_blog_card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); }
+  .ip_blog_card .ip_blog_card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 16px 24px; }
+  .ip_blog_card h4 {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.3em; }
+  .ip_blog_card span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px; }
+
+.ip_breadcrumb {
+  padding: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .ip_breadcrumb p {
+    color: rgba(255, 255, 255, 0.4); }
+    .ip_breadcrumb p a {
+      display: inline-block;
+      margin-right: 4px;
+      color: rgba(255, 255, 255, 0.4); }
+    .ip_breadcrumb p span {
+      margin-left: 4px; }
+
+.ip_tutorial_section {
+  padding: 100px 0; }
+
+.ip_tutorials_count span {
+  opacity: 0.6;
+  font-size: 16px;
+  margin-left: 10px; }
+
+.ip_sort_wrapper {
+  display: inline-block;
+  max-width: 160px;
+  position: relative; }
+  .ip_sort_wrapper::after {
+    content: '^';
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: #ffffff;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .ip_sort_wrapper .ip_tutorial_sort {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    color: #ffffff;
+    padding: 16px 36px 16px 28px;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    .ip_sort_wrapper .ip_tutorial_sort option {
+      color: #000000; }
+
+/***** blog page *****/
+.ip_featured_slider_section {
+  padding: 100px 0; }
+
+.ip_featured_slider .ip_featured_slider_pagination {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  z-index: 100;
+  text-align: right; }
+
+.ip_ft_post_card {
+  min-height: 410px; }
+  .ip_ft_post_card .ip_blog_card_content {
+    width: 100%; }
+    .ip_ft_post_card .ip_blog_card_content h4 {
+      max-width: 300px; }
+  .ip_ft_post_card .ip_primary_btn {
+    min-width: 270px;
+    text-align: center; }

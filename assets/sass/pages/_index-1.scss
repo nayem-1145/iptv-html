@@ -236,3 +236,308 @@
         width: auto;
     }
 }
+
+/****** pricing section start *****/ 
+.ip_pricing_section {
+    position: relative;
+    z-index: 1;
+    padding-top: 300px;
+
+    .ip_camera_shape {
+        position: absolute;
+        right: 0;  
+        top: -330px;
+    }
+
+    @include screen-992 {
+        .ip_camera_shape {
+            display: none;
+        }
+    }
+}
+
+.ip_pricing_slider {
+    width: calc(100% + 800px);
+    margin-left: -400px;
+    padding-top: 60px;
+
+    .swiper-slide {
+        transition: 0.3s;
+    }
+
+    .swiper-slide-active {
+        transform: translateY(-60px);
+    }
+}
+
+.ip_slider_pagination {
+    text-align: center;
+    margin-top: 32px;
+    .swiper-pagination-bullet {
+        width: 60px; 
+        height: 4px; 
+        background: rgba($color-white, 0.2);
+        display: inline-block;
+        opacity: 1;
+        border-radius: 0;
+
+        &.swiper-pagination-bullet-active {
+            background: $primary-color;
+        }
+    }
+}
+
+
+.pricing_card_wrapper {
+    position: relative;
+    padding-top: 10px;
+
+    .popular_bade {
+        position: absolute;
+        left: 50%; 
+        top: 0;
+        transform: translateX(-50%);
+        background: $primary-color; 
+        padding: 6px 12px;
+        color: $color-white;
+        font-size: 14px;
+        z-index: 2;
+
+        &::before {
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            right: -10px; 
+            width: 10px; 
+            height: 10px; 
+            background: #AD2042;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+    }
+}
+
+
+.ip_pricing_card {
+    clip-path: polygon(85% 0, 100% 7%, 100% 100%, 0 100%, 0 0);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    
+
+    .ip_pricing_card_content {
+        background: #1B3036;
+        padding: 46px 30px 30px;
+
+        .ip_pricing_card_header {
+            h2 {
+                font-size: 40px;
+                line-height: 20px;
+                span {
+                    font-size: 16px; 
+                    color: rgba($color-white, 0.4);
+                 }
+
+            }
+        }
+    }
+    .ip_pricing_feature_list {
+        margin-top: 60px;
+        li {
+            display: block; 
+            padding: 20px 0;
+            color: #CCD0CF;
+            border-bottom: 1px dashed #ccd0cf61;
+
+            i {
+                margin-right: 10px;
+            }
+            
+        }
+    }
+
+    .ip_pricing_brand_wrapper {
+        gap: 64px;
+        background: #13242A; 
+        padding: 40px;
+    }
+}
+
+.ip_star_review {
+    display: inline-flex;
+    align-items: center; 
+    gap: 4px;
+    li {
+        color: #FFE74A;
+        font-size: 14px;
+        i {
+            &.fa-regular {
+                color: rgba($color-white, 0.2);
+            }
+        }
+
+    }
+}
+
+
+/****** testimonial section start *********/
+
+.ip_testimonial_section {
+    padding-top: 100px;
+}
+.ip_testimonial_slider {
+    max-width: 850px;
+
+    .swiper-slide {
+        overflow: visible;
+    }
+
+    .swiper-slide-shadow {
+        display: none;
+    }
+}
+.ip_testimonial_card {
+    border-radius: 33px; 
+    background: #1E3B44;
+    padding: 60px 90px 34px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.259);
+
+    .ip_tst_bottom {
+        margin-top: 32px;
+        padding-top: 60px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+                content: '----------------------------------------';
+                letter-spacing: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: rgba($color-white, 0.2);
+                white-space: nowrap;
+                font-size: 14px;
+        }
+    }
+
+    .ip_author_thumbnail {
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+    .ip_tst_author_content {
+        h5 {
+            span {
+                font-size: 14px;
+                color: rgba($color-white, 0.6);
+            }
+        }
+    }
+    .likes-count {
+        svg {
+            transform: translateY(-2px);
+        }
+    }
+
+    @include screen-992 {
+        padding: 60px 32px 34px;
+    }
+}
+
+
+/***** faq section start *****/
+.ip_faq_section {
+    padding: 100px 0;
+
+}
+
+.ip_accordion {
+    .accordion-item {
+        background: #122429;
+        border: 1px solid rgba($color-white, 0.1);
+        padding: 40px 32px;
+        border-radius: 12px;
+
+        .accordion-header {
+            a {
+                color: $color-white;
+                font-size: 18px;
+                display: block;
+                position: relative;
+
+                &::after {
+                    content: '\f106';
+                    font-family: 'FontAwesome';
+                    position: absolute;
+                    right: 0; 
+                    top: 0;
+                    transition: 0.3s;
+                }
+
+                &.collapsed {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+        }
+
+        p{
+            color: rgba($color-white, 0.6);
+        }
+
+        .accordion-body {
+            padding: 0; 
+            padding-top: 16px;
+        }
+
+        + .accordion-item {
+            margin-top: 12px;
+        }
+    }
+}
+
+
+/***** blog section ****/
+
+.ip_blog_section {
+    padding: 100px 0;
+}
+
+.ip_blog_card {
+    background-repeat: no-repeat;
+    background-size: cover; 
+    min-height: 240px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%;
+        background: rgba(0,0,0,0.35);
+    }
+
+    .ip_blog_card_content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 16px 24px;
+    }
+
+    h4 {
+        color: $color-white;
+        font-size: 16px;
+        line-height: 1.3em;
+    }
+
+    span {
+        color: rgba($color-white, 0.6);
+        font-size: 15px;
+    }
+}
